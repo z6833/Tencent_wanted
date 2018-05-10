@@ -1,0 +1,30 @@
+url='https://hr.tencent.com/position.php'
+爬取腾讯招聘页面所有的招聘信息及详情页
+分析：
+    查看源码，对比F12面，发现该页面为静态页面。
+    带爬取字段都在在tr标签下，通过类名确定。
+    采用xpath解析。
+
+编码：
+    1.编辑items.py文件确定爬取字段。
+    # 职位名称
+    position_name = scrapy.Field()
+    # 职位类别
+    position_type = scrapy.Field()
+    # 招聘人数
+    wanted_number = scrapy.Field()
+    # 工作地点
+    work_location = scrapy.Field()
+    # 发布时间
+    publish_time = scrapy.Field()
+
+    # 详情信息
+    position_link = scrapy.Field()
+    # 工作职责
+    work_duty = scrapy.Field()
+    # 工作要求
+    work_skills = scrapy.Field()
+    2.创建爬虫。
+    3.编写爬虫文件。
+
+
